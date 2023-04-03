@@ -1,0 +1,32 @@
+{
+  "manifest_version":3,
+  "name":"Chrome Shopee",
+  "description":"Keyword research tool",
+  "version":"1.0",
+  "icons":{
+    "16":"images/icon.png",
+    "32":"images/icon.png",
+    "48":"images/icon.png",
+    "128":"images/icon.png"
+  },
+  "action":{
+    "default_icon":"images/icon.png",
+    "default_title": "Shopee Research",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+  "background": {
+    "service_worker":"background.js"
+  },
+  "content_scripts":[
+    {
+      "matches":["*://*/*"],
+      "js":["content-script.js"]
+    }
+  ]
+}
