@@ -1,9 +1,33 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>foobar</title>
-	</head>
-	<body>
-		<div>foobar</div>
-	</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chrome Shopee</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+		<div class="container" width="500">
+			<div class="card">
+				<div class="card-body">
+					<h3 class="card-title">Chrome Shopee</h3>
+					<div class="mb-3">
+						<form id="kwform">
+							<div class="mb-3">
+								<label class="form-label" for="id_keyword">KeyWord</label>
+								<input name="keyword" id="id_keyword" type="text" class="form-control" placeholder="keyword">
+							</div>
+							<div class="mb-3">
+								<button type="submit" id="kwform-scan" class="btn btn-primary">Scan</button> 
+							</div>
+						</form>
+					</div>
+					<div class="mb-3">
+						<textarea id="scan-results" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="popup.js"></script>
+  </body>
 </html>
