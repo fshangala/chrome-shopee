@@ -10,19 +10,47 @@
 			<div class="card">
 				<div class="card-body">
 					<h3 class="card-title">Chrome Shopee</h3>
-					<div class="mb-3">
-						<form id="kwform">
+					<ul class="nav nav-tabs" id="myTabs" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="keyword-tab" data-bs-toggle="tab" data-bs-target="#keyword-tab-pane" type="button" role="tab" aria-controls="keyword-tab-pane" aria-selected="true">Keyword Search</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="volume-tab" data-bs-toggle="tab" data-bs-target="#volume-tab-pane" type="button" role="tab" aria-controls="volume-tab-pane" aria-selected="false">Volume Search</button>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="keyword-tab-pane" role="tabpanel" aria-labelledby="keyword-tab" tabindex="0">
 							<div class="mb-3">
-								<label class="form-label" for="id_keyword">KeyWord</label>
-								<input name="keyword" id="id_keyword" type="text" class="form-control" placeholder="keyword">
+								<form id="kwform">
+									<div class="mb-3">
+										<label class="form-label" for="id_keyword">KeyWord</label>
+										<input name="keyword" id="id_keyword" type="text" class="form-control" placeholder="keyword">
+									</div>
+									<div class="mb-3">
+										<button type="submit" id="kwform-scan" class="btn btn-primary">Scan</button> 
+									</div>
+								</form>
 							</div>
 							<div class="mb-3">
-								<button type="submit" id="kwform-scan" class="btn btn-primary">Scan</button> 
+								<textarea id="scan-results" class="form-control"></textarea>
 							</div>
-						</form>
-					</div>
-					<div class="mb-3">
-						<textarea id="scan-results" class="form-control"></textarea>
+						</div>
+						<div class="tab-pane fade" id="volume-tab-pane" role="tabpanel" aria-labelledby="volume-tab" tabindex="0">
+							<div class="mb-3">
+								<form id="kwform">
+									<div class="mb-3">
+										<label class="form-label" for="id_keyword">KeyWord</label>
+										<input name="keyword" id="id_keyword" type="text" class="form-control" placeholder="keyword">
+									</div>
+									<div class="mb-3">
+										<button type="submit" id="kwform-scan" class="btn btn-primary">Scan</button> 
+									</div>
+								</form>
+							</div>
+							<div class="mb-3">
+								<textarea id="scan-results" class="form-control"></textarea>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
